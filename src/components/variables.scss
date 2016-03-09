@@ -1,0 +1,38 @@
+/*
+ * Typography
+ * ========================================================================== */
+
+$font-family-base: 'Segoe UI',
+'HelveticaNeue-Light',
+sans-serif;
+
+
+/*
+ * Media queries breakpoints
+ * ========================================================================== */
+
+/* Extra small screen / phone */
+
+$screen-xs-min: 480px;
+
+/* Small screen / tablet */
+
+$screen-sm-min: 768px;
+
+/* Medium screen / desktop */
+
+$screen-md-min: 992px;
+
+/* Large screen / wide desktop */
+
+$screen-lg-min: 1200px;
+
+
+/*
+ * Default value
+ * ========================================================================== */
+$background-color-base: #F5F8FF;
+$color-base: rgba(0, 185, 255, 1);
+$position-base: relative;
+$width-full: 100%;
+$height-full: 100%;

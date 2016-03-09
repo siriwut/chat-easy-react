@@ -1,0 +1,25 @@
+@import '../../../node_modules/normalize.css/normalize.css';
+@import '../variables.scss';
+html {
+    font-color: #222;
+    font-family: $font-family-base;
+    height: $height-full;
+}
+
+body {
+    background: $background-color-base;
+    height: $height-full;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.app {
+	position: absolute;
+    height: $height-full;
+    width: $width-full;
+    padding: 0;
+}

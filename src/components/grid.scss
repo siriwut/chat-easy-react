@@ -1,0 +1,10 @@
+.col {
+	
+}
+
+.row {
+	>.col {
+		@extend .col;
+	}
+}
+

@@ -1,0 +1,43 @@
+@import '../variables.scss';
+.chat-form {
+    height: 100%;
+    >.chat-board {
+        height: 80%;
+        padding: 0 1.5em 0 1.5em;
+        word-wrap: break-word;
+        overflow-y: scroll;
+        background-color: $background-color-base;
+        >.messages {
+            margin: 0;
+            padding: 0;
+            >li {
+                list-style-type: none;
+            }
+        }
+    }
+    >.message-box-group {
+        position: relative;
+        height: 20%;
+        bottom: 0;
+        border: 1px #E3E3E3 solid;
+        >.message-box {
+            float: left;
+            width: 70%;
+            height: 100%;
+            resize: none;
+            border: none;
+        }
+        >.btn-send-message {
+            float: left;
+            width: 30%;
+            height: 100%;
+            background-color: $color-base;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+    }
+}
