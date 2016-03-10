@@ -9,7 +9,9 @@ class Navbar extends Component {
             <nav className="navbar" >
         		<div className="navbar-in" >
         			<div className="box -left">
+                       <button className="btn-bars" >
                         <i className="fa fa-bars fa-2x"></i>
+                       </button>
                     </div>
         			<div className="box -right">Name</div>
         		</div>

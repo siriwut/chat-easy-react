@@ -1,3 +1,17 @@
+@import '../variables.scss';
+
 .sidebar {
-	display: none;
+    display: none;
+    position: absolute;
+    background-color: $background-color-base;
+    width: 60%;
+    height: 100%;
+    left: 0;
+    border-right: 1px solid #DBDBDB;
+}
+
+.use-sidebar {
+    &.sidebar {
+        display: block;
+    }
 }
