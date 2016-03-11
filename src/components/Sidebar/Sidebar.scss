@@ -8,6 +8,12 @@
     height: 100%;
     left: 0;
     border-right: 1px solid #DBDBDB;
+
+    @media screen and (min-width: $screen-md-min) {
+         width: 20%;
+         left: 0;
+         display: block;
+    }
 }
 
 .use-sidebar {

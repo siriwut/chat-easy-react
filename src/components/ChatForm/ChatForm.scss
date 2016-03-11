@@ -26,6 +26,9 @@
             height: 100%;
             resize: none;
             border: none;
+            @media screen and (min-width: $screen-md-min) {
+                width: 90%;
+            }
         }
         >.btn-send-message {
             float: left;
@@ -38,6 +41,9 @@
             text-decoration: none;
             display: inline-block;
             cursor: pointer;
+            @media screen and (min-width: $screen-md-min) {
+                width: 10%;
+            }
         }
     }
 }

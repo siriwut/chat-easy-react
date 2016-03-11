@@ -8,12 +8,12 @@ import s from './App.scss';
 class App extends Component {
     render() {
         return (
-            <div  >
-            <div className="use-sidebar main" >
-            	<Header />
-                <Content />
-            </div>
-                <Sidebar />
+            <div>
+                <div className="wrapper" >
+            	   <Header />
+                   <Content />
+                </div>
+                   <Sidebar />
             </div>
 
         );

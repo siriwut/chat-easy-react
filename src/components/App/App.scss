@@ -18,11 +18,16 @@ body {
     -webkit-box-sizing: border-box;
 }
 
-.main {
+.wrapper {
     position: absolute;
     height: $height-full;
     width: $width-full;
     padding: 0;
+
+    @media screen and (min-width: $screen-md-min) {
+        width: 80%;
+        right: 0;
+    }
 }
 
 .use-sidebar {

@@ -1,10 +1,10 @@
 @import '../variables.scss';
-
 .friend-list {
     background-color: $background-color-base;
     padding: 0;
     >.friend-list-header {
         font-weight: bold;
+        cursor: auto;
     }
     >li {
         list-style-type: none;

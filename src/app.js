@@ -5,6 +5,7 @@ import App from './components/App';
 
 
 ReactDOM.render(<App />, document.getElementById('chatEasy'));
+
 if (module.hot) {
     module.hot.accept();
 }

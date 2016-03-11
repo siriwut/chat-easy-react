@@ -5,7 +5,7 @@ import s from './Sidebar.scss';
 class Sidebar extends React.Component {
     render() {
         return (
-            <div className="use-sidebar sidebar">
+            <div className="sidebar">
 				<FriendList />
 			</div>
         );
