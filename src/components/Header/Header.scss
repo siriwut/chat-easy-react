@@ -1,7 +1,10 @@
 @import '../variables.scss';
-
+@import '../mixins.scss';
 .header {
-	position: relative;
-	width: $width-full;
-	min-height: 50px;
+    position: absolute;
+    width: 100%;
+    min-height: 50px;
+    @media screen and (min-width: $screen-xs-min) {
+        @include right-layout;
+    }
 }

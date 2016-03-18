@@ -7,13 +7,12 @@ class Navbar extends Component {
     render() {
         return (
             <nav className="navbar" >
-        		<div className="navbar-in" >
-        			<div className="box -left">
-                       <button className="btn-bars" >
+        		<div className="inner" >
+        			<div className="navbar-header" >
+                       <button className="sidebar-toggle" >
                         <i className="fa fa-bars fa-2x"></i>
                        </button>
                     </div>
-        			<div className="box -right">Name</div>
         		</div>
         	</nav>
         );

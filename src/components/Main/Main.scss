@@ -1,0 +1,10 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+.wrapper {
+    position: absolute;
+    background: $background-color-base;
+    height: 100%;
+    width: 100%;
+    top: 0;
+	bottom: 0;
+}
