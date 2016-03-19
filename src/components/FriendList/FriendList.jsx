@@ -4,11 +4,11 @@ import s from './FriendList.scss';
 export default class FriendList extends Component {
     render() {
         return (
-            <ul className="friend-list" >
-            	<li className="friend-list-header" >Online Friends</li>
-				<li><i className="fa fa-circle online-status" ></i><span className="friend-name" >Tape</span></li>
-				<li><i className="fa fa-circle online-status" ></i><span className="friend-name" >John</span></li>
-				<li><i className="fa fa-circle online-status" ></i><span className="friend-name" >Jep</span></li>
+            <ul className="fa-ul friend-list" >
+            	<li className="list-header" >Online Friends</li>
+				<li><a href="#"><i className="fa fa-circle online-status" ></i>Tape</a></li>
+				<li><a href="#"><i className="fa fa-circle online-status" ></i>John</a></li>
+				<li><a href="#"><i className="fa fa-circle online-status" ></i>Jep</a></li>
 			</ul>
         );
     };

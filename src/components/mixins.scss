@@ -16,12 +16,12 @@
 
 /** layout mixins **/
 
-@mixin left-layout($width: 25%) {
+@mixin left-layout($width: 20%) {
 	left: 0;
 	width: $width;
 }
 
-@mixin right-layout($width: 75%) {
+@mixin right-layout($width: 80%) {
 	right: 0;
 	width: $width;
 }

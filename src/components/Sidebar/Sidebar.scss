@@ -1,12 +1,13 @@
 @import '../variables.scss';
 @import '../mixins.scss';
-
 .sidebar {
-	display: none;
-	position: absolute;
-
-	@media screen and (min-width: $screen-xs-min) {
-		display: block;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    border-right: 1px solid #d0d1d5;
+    @media screen and (min-width: $screen-xs-min) {
+        display: block;
         @include left-layout;
     }
 }

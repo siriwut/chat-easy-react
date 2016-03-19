@@ -1,5 +1,5 @@
 import keyMirror from 'keymirror';
 
 export default keyMirror({
-	CHAT_SEND_MESSAGE: null
+	CHATFORM_SEND_MESSAGE: null
 });

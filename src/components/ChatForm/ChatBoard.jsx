@@ -5,24 +5,7 @@ class ChatBoard extends Component {
     render() {
         return (
             <div className="chatboard" >
-            	<ul >
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Helloddddddddddddddddddddddddddddddddddddddddddddddddddddd</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-            		<li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
-                    <li>Tape: Hello</li>
+            	<ul className="message-list" >
                     <li>Tape: Hello</li>
                     <li>Tape: Hello</li>
                     <li>Tape: Hello</li>

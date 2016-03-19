@@ -1,14 +1,15 @@
-import AppDispatcher from '../dispatcher/AppDispatcher'
 import EventEmitter from 'events';
 import assign from 'object-assign';
+import AppDispatcher from '../dispatcher/AppDispatcher.js';
+import ChatFormConstants from '../constants/ChatFormConstants.js';
 
 const CHANGE_EVENT = 'change';
 
 function sendMessage(message) {
-    console.log('sent message');
+    console.log('sent message: ' + message);
 }
 
-class ChatStore extends EventEmitter {
+class ChatFormStore extends EventEmitter {
 
     static emitChange() {
         this.emit(CHANGE_EVENT);
@@ -26,8 +27,9 @@ class ChatStore extends EventEmitter {
 }
 
 AppDispatcher.register((action) => {
+    console.log('switch action');
     switch (action.actionType) {
-        case ChatConstants.CHAT_SEND_MESSAGE:
+        case ChatFormConstants.CHATFORM_SEND_MESSAGE:
             sendMessage(action.message);
             ChatStore.emitChange();
             break;
@@ -35,4 +37,4 @@ AppDispatcher.register((action) => {
 });
 
 
-export default ChatStore;
+export default ChatFormStore;
