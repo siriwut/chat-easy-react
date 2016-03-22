@@ -5,36 +5,52 @@ import ChatFormConstants from '../constants/ChatFormConstants.js';
 
 const CHANGE_EVENT = 'change';
 
+let state = {
+    sentMessage: ''
+};
+
 function sendMessage(message) {
     console.log('sent message: ' + message);
+    state.sentMessage = message;
 }
 
 class ChatFormStore extends EventEmitter {
 
-    static emitChange() {
+    constructor() {
+        super();
+    }
+
+    getState() {
+        return state;
+    }
+
+    emitChange() {
         this.emit(CHANGE_EVENT);
     }
 
 
-    static addChangeListener(callback) {
+    addChangeListener(callback) {
         this.on(CHANGE_EVENT, callback);
     }
 
 
-    static removeChangeListener(callback) {
+    removeChangeListener(callback) {
         this.removeListener(CHANGE_EVENT, callback);
     }
 }
 
-AppDispatcher.register((action) => {
-    console.log('switch action');
+let ChatFormStoreInstance = new ChatFormStore();
+
+AppDispatcher.register(action => {
     switch (action.actionType) {
         case ChatFormConstants.CHATFORM_SEND_MESSAGE:
+            console.log('send shit!!!');
             sendMessage(action.message);
-            ChatStore.emitChange();
             break;
     }
+
+    ChatFormStoreInstance.emitChange();
 });
 
 
-export default ChatFormStore;
+export default ChatFormStoreInstance;

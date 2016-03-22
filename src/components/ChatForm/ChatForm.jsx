@@ -2,38 +2,41 @@ import React, { Component, PropTypes } from 'react';
 import s from './ChatForm.scss';
 import ChatBoard from './ChatBoard.jsx';
 import MessageBox from './MessageBox.jsx';
-import ChatFormAction from '../../actions/ChatFormActions.js';
+import ChatFormStore from '../../stores/ChatFormStore.js';
 
 
 
 class ChatForm extends Component {
 
 	constructor(props) {
-		super(props);	
-		this.state = {
-			message: ''
-		};
+		super(props);
+		this.state = this._getStateFromStore();
 	}
 
-	_handleMessageChange(e) {
-		this.setState({
-			message: e.target.value
-		});
+	componentWillMount() {
+		ChatFormStore.addChangeListener(this._onChange.bind(this));
 	}
 
-	_sendMessage(e) {
-
-		ChatFormAction.sendMessage(this.state.message);
-		e.preventDefault();
+	componentWillUnMount() {
+		ChatFormStore.removeChangeListener(this._onChange.bind(this));
 	}
-
+	
     render() {
         return (
-            <form className="chatform" onSubmit={this._sendMessage.bind(this)} >
+            <div className="chatform"  >
 				<ChatBoard />
-				<MessageBox message={this.state.message} handleMessageChange={this._handleMessageChange.bind(this)} />
-			</form>
+				<MessageBox  />
+			</div>
         );
+    }
+
+    _getStateFromStore() {
+    	return ChatFormStore.getState();
+    	
+    }
+
+    _onChange() {
+    	this.setState(this._getStateFromStore());
     }
 }
 
