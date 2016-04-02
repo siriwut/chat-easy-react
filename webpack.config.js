@@ -1,13 +1,13 @@
 import path from 'path';
 import webpack from 'webpack';
-import { host } from './src/config.js';
+import { host } from './src/config/config.js';
 
 
 const config = {
     //define entry point of app
     entry: {
         app: [
-            path.resolve(__dirname, 'src/app.js')
+            path.resolve(__dirname, 'src/client/main.js')
 
         ]
     },

@@ -28,11 +28,9 @@ class ChatFormStore extends EventEmitter {
         this.emit(CHANGE_EVENT);
     }
 
-
     addChangeListener(callback) {
         this.on(CHANGE_EVENT, callback);
     }
-
 
     removeChangeListener(callback) {
         this.removeListener(CHANGE_EVENT, callback);
@@ -44,7 +42,6 @@ let ChatFormStoreInstance = new ChatFormStore();
 AppDispatcher.register(action => {
     switch (action.actionType) {
         case ChatFormConstants.CHATFORM_SEND_MESSAGE:
-            console.log('send shit!!!');
             sendMessage(action.message);
             break;
     }
